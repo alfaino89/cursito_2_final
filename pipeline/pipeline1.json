@@ -1,0 +1,32 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set esPar",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "espar",
+					"value": {
+						"value": "@equals(mod(pipeline().parameters.numeroAnalizar,2),0)",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"numeroAnalizar": {
+				"type": "int",
+				"defaultValue": 0
+			}
+		},
+		"variables": {
+			"espar": {
+				"type": "Boolean"
+			}
+		},
+		"annotations": []
+	}
+}

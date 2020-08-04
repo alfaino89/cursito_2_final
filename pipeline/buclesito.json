@@ -1,6 +1,21 @@
 {
 	"name": "buclesito",
 	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "rangelist",
+					"value": {
+						"value": "@range(1,pipeline().parameters.numerin)",
+						"type": "Expression"
+					}
+				}
+			}
+		],
 		"parameters": {
 			"numerin": {
 				"type": "int",
@@ -11,6 +26,12 @@
 			"factorial": {
 				"type": "String",
 				"defaultValue": "1"
+			},
+			"aux": {
+				"type": "String"
+			},
+			"rangelist": {
+				"type": "Array"
 			}
 		},
 		"annotations": []

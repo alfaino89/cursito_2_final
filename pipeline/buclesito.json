@@ -1,0 +1,18 @@
+{
+	"name": "buclesito",
+	"properties": {
+		"parameters": {
+			"numerin": {
+				"type": "int",
+				"defaultValue": 1
+			}
+		},
+		"variables": {
+			"factorial": {
+				"type": "String",
+				"defaultValue": "1"
+			}
+		},
+		"annotations": []
+	}
+}

@@ -1,0 +1,74 @@
+{
+	"name": "buclesito",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "rangelist",
+					"value": {
+						"value": "@range(1,pipeline().parameters.numerin)",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('rangelist')",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "multiplicar",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "aux",
+								"value": {
+									"value": "@string(mul(int(variables('factorial')),item()))",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"numerin": {
+				"type": "int",
+				"defaultValue": 1
+			}
+		},
+		"variables": {
+			"factorial": {
+				"type": "String",
+				"defaultValue": "1"
+			},
+			"aux": {
+				"type": "String"
+			},
+			"rangelist": {
+				"type": "Array"
+			}
+		},
+		"annotations": []
+	}
+}

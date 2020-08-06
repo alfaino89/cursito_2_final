@@ -1,0 +1,23 @@
+{
+	"name": "results",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dsdatafactory",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "resultssp.csv",
+				"container": "aci-contenedorcito"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

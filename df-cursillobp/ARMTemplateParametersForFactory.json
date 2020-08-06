@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "df-cursillobp"
+		},
+		"Ls_databricks_accessToken": {
+			"value": ""
+		},
+		"ls_dsdatafactory_connectionString": {
+			"value": ""
+		},
+		"ls_sqlserver_connectionString": {
+			"value": ""
+		},
+		"ls_kvcursodatafactory_properties_typeProperties_baseUrl": {
+			"value": "https://kvdatafactorycurso.vault.azure.net/"
+		}
+	}
+}

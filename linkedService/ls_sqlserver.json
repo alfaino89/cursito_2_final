@@ -5,8 +5,15 @@
 		"annotations": [],
 		"type": "SqlServer",
 		"typeProperties": {
-			"connectionString": "integrated security=False;data source=LAPTOP-QQD0FN32\\SQLEXPRESS;initial catalog=DemoDataBase;user id=fvmosque",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxN2U5YzI2MC04YzU2LTRjMDAtYjYxYS1hZWY1N2FlNmVlNTEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"connectionString": "Integrated Security=False;Data Source=LAPTOP-QQD0FN32\\SQLEXPRESS;Initial Catalog=DemoDataBase;User ID=fvmosque",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_kvcursodatafactory",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "fvmosque"
+			}
 		},
 		"connectVia": {
 			"referenceName": "ir-curso-datafactory",

@@ -23,6 +23,10 @@
 			"type": "string",
 			"defaultValue": "https://kvdatafactorycurso.vault.azure.net/"
 		},
+		"SC_MINUTE_PAR_IMPAR_properties_buclesito_parameters_numerin": {
+			"type": "int",
+			"defaultValue": 12
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -61,6 +65,9 @@
 					},
 					"ls_kvcursodatafactory_properties_typeProperties_baseUrl": {
 						"value": "[parameters('ls_kvcursodatafactory_properties_typeProperties_baseUrl')]"
+					},
+					"SC_MINUTE_PAR_IMPAR_properties_buclesito_parameters_numerin": {
+						"value": "[parameters('SC_MINUTE_PAR_IMPAR_properties_buclesito_parameters_numerin')]"
 					}
 				}
 			},

@@ -1,0 +1,28 @@
+{
+	"name": "SC_MINUTE_PAR_IMPAR",
+	"properties": {
+		"description": "Prueba de Calendarización",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "buclesito",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"numerin": 12
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2020-08-07T21:42:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

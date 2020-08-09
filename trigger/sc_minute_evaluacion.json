@@ -3,7 +3,7 @@
 	"properties": {
 		"description": "Calendariza el pipeline de la evaluación",
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {

@@ -5,11 +5,24 @@
 			"referenceName": "ls_dsdatafactory",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"directorio": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "Orden.csv",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "Orden/@{dataset().directorio}",
+					"type": "Expression"
+				},
 				"container": "aci-franklinmosquera"
 			},
 			"columnDelimiter": ",",

@@ -1,0 +1,25 @@
+{
+	"name": "sc_minute_evaluacion",
+	"properties": {
+		"description": "Calendariza el pipeline de la evaluación",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_carga_inc_comp",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2020-08-09T23:25:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

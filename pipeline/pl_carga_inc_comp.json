@@ -18,7 +18,7 @@
 					"source": {
 						"type": "SqlServerSource",
 						"sqlReaderQuery": {
-							"value": "select distinct location_type from orden\nwhere location_type is not null ",
+							"value": "select distinct location_type from orden\n",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",

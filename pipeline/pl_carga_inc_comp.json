@@ -47,7 +47,28 @@
 					"items": {
 						"value": "@array(activity('Lookup1').output.value)",
 						"type": "Expression"
-					}
+					},
+					"activities": [
+						{
+							"name": "pl_carga_inc_ej",
+							"type": "ExecutePipeline",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "pl_carga_inc_ej",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true,
+								"parameters": {
+									"location_type": {
+										"value": "@item().location_type",
+										"type": "Expression"
+									}
+								}
+							}
+						}
+					]
 				}
 			}
 		],
